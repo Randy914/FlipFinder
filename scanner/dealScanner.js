@@ -71,7 +71,7 @@ Return ONLY a JSON array (no markdown, no explanation) of the top 5 deals in thi
 Only include deals with at least 40% ROI and high confidence. Real URLs only.`;
 
   const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-haiku-4-5-20251001",
     max_tokens: 2000,
     tools: [{ type: "web_search_20250305", name: "web_search" }],
     messages: [{ role: "user", content: prompt }],
@@ -111,7 +111,7 @@ Return ONLY JSON (no markdown):
 }`;
 
   const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-haiku-4-5-20251001,
     max_tokens: 500,
     messages: [{ role: "user", content: prompt }],
   });
